@@ -48,11 +48,11 @@ def build_styles():
             name="BookH1",
             parent=styles["Heading1"],
             fontName="Helvetica-Bold",
-            fontSize=22,
-            leading=28,
+            fontSize=28,
+            leading=36,
             textColor=colors.HexColor("#10243d"),
-            spaceBefore=16,
-            spaceAfter=10,
+            spaceBefore=20,
+            spaceAfter=14,
         )
     )
     styles.add(
@@ -60,11 +60,11 @@ def build_styles():
             name="BookH2",
             parent=styles["Heading2"],
             fontName="Helvetica-Bold",
-            fontSize=18,
-            leading=24,
+            fontSize=24,
+            leading=33,
             textColor=colors.HexColor("#163759"),
-            spaceBefore=12,
-            spaceAfter=8,
+            spaceBefore=16,
+            spaceAfter=12,
         )
     )
     styles.add(
@@ -72,11 +72,11 @@ def build_styles():
             name="BookBody",
             parent=styles["BodyText"],
             fontName="Helvetica",
-            fontSize=14,
-            leading=22,
+            fontSize=19.5,
+            leading=31,
             alignment=TA_LEFT,
             textColor=colors.HexColor("#1a2635"),
-            spaceAfter=8,
+            spaceAfter=11,
         )
     )
     styles.add(
@@ -84,13 +84,13 @@ def build_styles():
             name="BookBullet",
             parent=styles["BodyText"],
             fontName="Helvetica",
-            fontSize=14,
-            leading=22,
-            leftIndent=16,
+            fontSize=19.5,
+            leading=31,
+            leftIndent=22,
             firstLineIndent=-10,
             bulletIndent=4,
             textColor=colors.HexColor("#1a2635"),
-            spaceAfter=4,
+            spaceAfter=7,
         )
     )
     return styles
@@ -126,10 +126,10 @@ def build_pdf():
     doc = SimpleDocTemplate(
         str(OUTPUT),
         pagesize=letter,
-        rightMargin=0.95 * inch,
-        leftMargin=0.95 * inch,
-        topMargin=0.95 * inch,
-        bottomMargin=0.95 * inch,
+        rightMargin=1.28 * inch,
+        leftMargin=1.28 * inch,
+        topMargin=1.28 * inch,
+        bottomMargin=1.28 * inch,
         title="Leashing AI",
         author="OpenClaw / Poly Mintman",
     )
