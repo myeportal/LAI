@@ -1,0 +1,382 @@
+:root {
+  --bg: #08111c;
+  --bg-soft: rgba(255, 255, 255, 0.04);
+  --panel: rgba(9, 17, 28, 0.9);
+  --panel-2: rgba(14, 25, 38, 0.9);
+  --text: #ecf3ff;
+  --muted: #b9c4d5;
+  --line: rgba(255, 255, 255, 0.09);
+  --gold: #e5ad56;
+  --gold-2: #f5c46e;
+  --blue: #51b8ff;
+  --blue-2: #97d7ff;
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(81, 184, 255, 0.18), transparent 35%),
+    radial-gradient(circle at top right, rgba(229, 173, 86, 0.18), transparent 30%),
+    linear-gradient(180deg, #08111c 0%, #0d1826 100%);
+  color: var(--text);
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 80px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.brand,
+.hero h1,
+.section-heading h2,
+.offer-copy h2 {
+  font-family: "Space Grotesk", Inter, sans-serif;
+}
+
+.brand {
+  font-size: 1rem;
+  letter-spacing: 0.28em;
+  font-weight: 700;
+}
+
+.hero {
+  padding: 14px 0 8px;
+}
+
+.hero-grid,
+.offer-layout,
+.lesson-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.8rem, 6vw, 5.25rem);
+  line-height: 0.94;
+  margin: 0 0 18px;
+  max-width: 10ch;
+}
+
+.eyebrow {
+  color: var(--gold-2);
+  font-size: 0.84rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.subhead,
+.video-copy p,
+.lesson-copy p,
+.offer-copy p,
+.info-card p,
+.info-card li,
+.faq-list p,
+.trust-row,
+.lesson-cta p,
+.section-intro {
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.72;
+}
+
+.hero-points,
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-points span,
+.trust-row span {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.hero-actions,
+.offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0 20px;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 15px 22px;
+  font-weight: 700;
+  transition: 180ms ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  color: #08111c;
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  box-shadow: 0 18px 36px rgba(229, 173, 86, 0.28);
+}
+
+.btn-secondary,
+.nav-cta {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+}
+
+.nav-cta {
+  border-radius: 999px;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-large {
+  min-width: 260px;
+}
+
+.hero-media,
+.offer-visual {
+  position: relative;
+}
+
+.cover-art,
+.offer-visual img {
+  width: 100%;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  margin-top: 26px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2,
+.offer-copy h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3.4rem);
+  line-height: 1.05;
+  max-width: 14ch;
+}
+
+.video-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.two-up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.info-card,
+.framework-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.info-card h3,
+.framework-card h3,
+.framework-tier h4 {
+  margin-top: 0;
+}
+
+.info-card ul,
+.lesson-copy ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.framework-tier {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.framework-tier:first-of-type {
+  border-top: 0;
+  padding-top: 6px;
+}
+
+.tier-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(81,184,255,0.28), rgba(229,173,86,0.24));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: var(--blue-2);
+}
+
+.lesson-cta {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.quote-panel blockquote {
+  margin: 0;
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  color: var(--gold-2);
+  text-align: center;
+}
+
+.offer-layout {
+  align-items: stretch;
+}
+
+.offer-stack {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.offer-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.offer-item span {
+  color: var(--gold-2);
+  font-weight: 800;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-list details {
+  padding: 18px 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.fine-print,
+code {
+  font-size: 0.95rem;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .offer-layout,
+  .lesson-grid,
+  .three-up,
+  .two-up {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: none;
+  }
+
+  .section-heading h2,
+  .offer-copy h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 18px, 1180px);
+    padding-top: 14px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn,
+  .nav-cta {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .offer-actions {
+    flex-direction: column;
+  }
+}
