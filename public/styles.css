@@ -133,6 +133,11 @@ video {
   margin: 30px 0 20px;
 }
 
+.stripe-buy-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
 .btn {
   text-decoration: none;
   border-radius: 999px;

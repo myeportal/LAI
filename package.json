@@ -1,0 +1,17 @@
+{
+  "name": "leashingai-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Leashing AI sales site with secure ebook delivery",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "preview": "python3 -m http.server 4173",
+    "preview:public": "python3 -m http.server 4174 --directory public"
+  },
+  "dependencies": {
+    "resend": "^4.0.1",
+    "stripe": "^18.3.0"
+  }
+}

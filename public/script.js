@@ -1,4 +1,4 @@
-const checkoutUrl = "#checkout-link-needed";
+const checkoutUrl = "https://buy.stripe.com/9B6fZh3kjaWU8KGbCu5AQ0b";
 const successUrl = "/thank-you.html";
 
 const yearEl = document.getElementById("year");
